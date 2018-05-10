@@ -15,6 +15,7 @@ class AuctionsChannel < ApplicationCable::Channel
   end
 
   def bid(data)
+    puts data
     ActionCable.server.broadcast "bid-broadcast", { data: data }
   end
 
